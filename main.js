@@ -13,4 +13,7 @@ mql.addEventListener("change", (evt) => {
   handlePrintChange(evt.matches);
 });
 
+window.addEventListener("beforeprint", () => console.debug("Before print"));
+window.addEventListener("afterprint", () => console.debug("After print"));
+
 document.querySelector("button#print").addEventListener("click", () => window.print());
